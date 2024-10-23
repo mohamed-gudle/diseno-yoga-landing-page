@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #F5F0FF;
+  --foreground: #4B3E65;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -14,11 +14,18 @@
   }
 }
 
+.gradient-text {
+  @apply bg-clip-text text-transparent;
+  background-clip: text;
+}
+
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
+
+
 
 @layer utilities {
   .text-balance {
