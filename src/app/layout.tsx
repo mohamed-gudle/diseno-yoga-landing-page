@@ -2,6 +2,7 @@ import { poppins } from "@/app/fonts";
 import Header from "@/components/layout/header";
 import type { Metadata } from "next";
 import "./globals.css";
+import ThemeProvider from "@/theme/theme-provider";
 
 
 
@@ -17,12 +18,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <ThemeProvider>
       <body
-        className={`${poppins.className} antialiased`}
+        className={`${poppins.className} antialiased dark:bg-background-dark text-text-dark`}
       >
         <Header />
         {children}
       </body>
+      </ThemeProvider>
     </html>
   );
 }

@@ -32,3 +32,8 @@ body {
     text-wrap: balance;
   }
 }
+@layer base {
+  * {
+    @apply transition-colors duration-1000 ease-in-out;
+  }
+}

@@ -9,10 +9,10 @@ export default function Hero() {
    * col 1: flex col justify center items start text start
    */
   return (
-    <section className="grid grid-cols-2 gap-0" id="hero">
-      <div className="flex flex-col justify-center items-start text-start">
+    <section className="grid lg:grid-cols-2 gap-0 py-12">
+      <div className="flex flex-col justify-center items-center lg:items-start text-center lg:text-start">
         <h1
-          className={`${lora.className} text-8xl font-medium text-title text-nowrap text-over overflow-hidden leading-snug`}
+          className={`${lora.className} text-5xl lg:text-8xl font-medium text-title lg:text-nowrap overflow-hidden leading-snug dark:text-title-dark`}
         >
           Choose Your
           <br />
@@ -27,11 +27,17 @@ export default function Hero() {
             height={500}
             className="w-20 h-20 inline-block object-contain pl-7"
           />
-          <br /> Teacher
+          <span className="lg:block hidden lg:h-0">
+            <br />
+          </span>
+          Teacher
         </h1>
-        <p className="text-base text-start mt-5">
-          Calm your mind and body with the best yoga <br /> teachers available,
-          relax your day and stay positive.
+        <p className="text-base lg:text-start text-center mt-5">
+          Calm your mind and body with the best yoga
+          <span className="lg:block hidden lg:h-0">
+            <br />
+          </span>
+          teachers available, relax your day and stay positive.
         </p>
         <button className="bg-gradient-primary text-white pl-7 pr-14 py-4 rounded-[4rem] mt-8">
           Get Started
